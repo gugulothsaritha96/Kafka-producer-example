@@ -1,0 +1,9 @@
+server:
+  port: 9191
+
+
+
+Spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092

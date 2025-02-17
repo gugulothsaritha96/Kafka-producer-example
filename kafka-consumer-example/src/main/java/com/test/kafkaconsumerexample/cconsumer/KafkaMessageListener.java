@@ -1,5 +1,6 @@
 package com.test.kafkaconsumerexample.cconsumer;
 
+import com.test.kafkaconsumerexample.dto.Customer;
 import org.apache.juli.logging.LogFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,7 @@ public class KafkaMessageListener {
 
     @KafkaListener(topics = "test-topic-5" ,groupId="test-group")
     public void consume(Customer customer){
-        log.info("consumer consume the message  {}",  customer);
+        log.info("consumer consume the events  {}",  customer.toString());
     }
 
 //    @KafkaListener(topics = "test-topic-4" ,groupId="test-group")
